@@ -33,7 +33,7 @@
 
 		<section id="prerequisites">
 			<h3><a name="prerequisites" class="anchor" href="#prerequisites"><span class="octicon octicon-link"></span></a>Prerequisites</h3>
-			<p>The major prerequisite to implementing conversions is that you have a page hosted on your system that will be the target of all the conversion tracking links in your emails. This page can be hosted on virtually any platform and technology as long as it has the ability to parse URL parameters and store and/or forward those parameter values on to other pages. A proof of concept page that uses only HTML and JavaScript to create conversions is available in this documentation at XXXXXXXX.
+			<p>The major prerequisite to implementing conversions is that you have a page hosted on your system that will be the target of all the conversion tracking links in your emails. This page can be hosted on virtually any platform and technology as long as it has the ability to parse URL parameters and store and/or forward those parameter values on to other pages. A proof of concept page that uses only HTML and JavaScript to create conversions is available in this documentation at <a href="http://precisiondialogue.github.io/SFMC-Conversion/conv.html" target="_blank">http://precisiondialogue.github.io/SFMC-Conversion/conv.html</a>. You can view the source of that page or see it in the <a href="https://github.com/PrecisionDialogue/SFMC-Conversion" target="_blank"> repository.
 			</p>
 			
         </section>
@@ -47,7 +47,7 @@
 			<p>
 This is a test conversion tracking email. &lt;br/&gt;
 &lt;br/&gt;
-&lt;a href="http://XXXXXXXX/conv.html" conversion="true"&gt;Click&lt;/a&gt; to track this conversion.&lt;br/&gt;
+&lt;a href="http://precisiondialogue.github.io/SFMC-Conversion/conv.html" conversion="true"&gt;Click&lt;/a&gt; to track this conversion.&lt;br/&gt;
 &lt;/p&gt;
 &lt;table cellpadding="2" cellspacing="0" width="600" ID="Table5" Border=0&gt;&lt;tr&gt;&lt;td&gt;&lt;font face="verdana" size="1" color="#444444"&gt;This email was sent by: &lt;b&gt;%%Member_Busname%%&lt;/b&gt;&lt;br&gt;%%Member_Addr%% %%Member_City%%, %%Member_State%%, %%Member_PostalCode%%, %%Member_Country%%&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;a href="%%profile_center_url%%" alias="Update Profile"&gt;Update Profile&lt;/a&gt;&lt;br/&gt;
 &lt;br/&gt;
@@ -71,7 +71,7 @@ This is a test conversion tracking email. &lt;br/&gt;
 			<p>After creating the XML string you need to embed the tracking pixel image onto the conversion page (or ensure that it is loaded via scripting or other technology). The tracking pixel URL needs to include the correctly formed XML string as parameter. This will send the conversion data back to SFMC and make it available for reporting.
 			</p>
 			
-			<p>You can use the fully functional proof of concept example that uses just HTML and JavaScript to fulfil the conversion tracking portion. Create an email in your SFMC account with a bas URL of XXXX and a <strong>conversion=&quot;true&quot;</strong>attribute then visit that link from a sent email, set the appropriate values and click the <strong>Perform Conversion Request</strong> button to complete the conversion.</p>
+			<p>You can use the fully functional proof of concept example that uses just HTML and JavaScript to fulfil the conversion tracking portion. Create an email in your SFMC account with a bas URL of http://precisiondialogue.github.io/SFMC-Conversion/conv.html and a <strong>conversion=&quot;true&quot;</strong>attribute then visit that link from a sent email, set the appropriate values and click the <strong>Perform Conversion Request</strong> button to complete the conversion.</p>
 			
 		</section>
 		
