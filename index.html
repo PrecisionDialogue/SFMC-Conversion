@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+	<script src="javascripts/jquery-1.11.0.min.js"></script>
+	<script src="javascripts/lightbox.min.js"></script>
+	<link href="stylesheets/lightbox.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>SalesForce Marketing Cloud (ExactTarget) Documentation by PrecisionDialogue</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>SalesForce Marketing Cloud (ExactTarget) conversions documentation and proof of concept</h1>
+		  <h2>by PrecisionDialogue</h2>
+          <h2>Documentation and proof of concept for using conversions in SalesForce Marketing Cloud</h2>
+        </header>
+
+        <hr>
+
+        <section id="main_content">
+          <h3><a name="welcome" class="anchor" href="#welcome"><span class="octicon octicon-link"></span></a>Welcome the documentation and proof of concept using <a href="//help.exacttarget.com/en/documentation/exacttarget/content/conversion_tracking" target="_blank">SFMC Conversions</a>.</h3>
+
+		<section id="prerequisites">
+			<h3><a name="prerequisites" class="anchor" href="#prerequisites"><span class="octicon octicon-link"></span></a>Prerequisites</h3>
+			<p>The major prerequisite to implementing conversions is that you have a page hosted on your system that will be the target of all the conversion tracking links in your emails. This page can be hosted on virtually any platform and technology as long as it has the ability to parse URL parameters and store and/or forward those parameter values on to other pages. A proof of concept page that uses only HTML and JavaScript to create conversions is available in this documentation at XXXXXXXX.
+			</p>
+			
+        </section>
+
+		<section id="email-config">
+			<h3><a name="email-config" class="anchor" href="#email-config"><span class="octicon octicon-link"></span></a>Email Configuration</h3>
+
+			<p>All conversion tracked linked in your email must be created with the <strong>conversion=&quot;true&quot;</strong> attribute as part of the anchor tag. By doing this SFMC will automatically append the required URL parameters to the URL to enable conversion tracking.</p>
+			
+			<pre>
+			<p>
+This is a test conversion tracking email. &lt;br/&gt;
+&lt;br/&gt;
+&lt;a href="http://XXXXXXXX/conv.html" conversion="true"&gt;Click&lt;/a&gt; to track this conversion.&lt;br/&gt;
+&lt;/p&gt;
+&lt;table cellpadding="2" cellspacing="0" width="600" ID="Table5" Border=0&gt;&lt;tr&gt;&lt;td&gt;&lt;font face="verdana" size="1" color="#444444"&gt;This email was sent by: &lt;b&gt;%%Member_Busname%%&lt;/b&gt;&lt;br&gt;%%Member_Addr%% %%Member_City%%, %%Member_State%%, %%Member_PostalCode%%, %%Member_Country%%&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;a href="%%profile_center_url%%" alias="Update Profile"&gt;Update Profile&lt;/a&gt;&lt;br/&gt;
+&lt;br/&gt;
+&lt;custom name="opencounter" type="tracking"&gt;
+			</pre>
+
+			
+		</section>
+
+		<section id="landing-page-options">
+			<h3><a name="landing-page-options" class="anchor" href="#landing-page-options"><span class="octicon octicon-link"></span></a>Landing Page Configuration</h3>
+			<p>The landing pages must be able to parse the conversion parameters and either store them within a user session scope on either the server or client. The parameter values will need to be used on the actual page where the conversion takes place.</p>
+
+		</section>
+		
+		<section id="conversion">
+			<h3><a name="conversion" class="anchor" href="#conversion"><span class="octicon octicon-link"></span></a>Conversion</h3>
+			
+			<p>On the page where the actual conversion takes place you will need to have access to the user session specific conversion values that were passed to your landing page. You use those parameter values and any transaction specific data that you need to track for the conversion to build an <a href="https://help.exacttarget.com/en/documentation/exacttarget/content/conversion_tracking/#XML_String" target="_blank">XML string</a>.</p>
+			
+			<p>After creating the XML string you need to embed the tracking pixel image onto the conversion page (or ensure that it is loaded via scripting or other technology). The tracking pixel URL needs to include the correctly formed XML string as parameter. This will send the conversion data back to SFMC and make it available for reporting.
+			</p>
+			
+			<p>You can use the fully functional proof of concept example that uses just HTML and JavaScript to fulfil the conversion tracking portion. Create an email in your SFMC account with a bas URL of XXXX and a <strong>conversion=&quot;true&quot;</strong>attribute then visit that link from a sent email, set the appropriate values and click the <strong>Perform Conversion Request</strong> button to complete the conversion.</p>
+			
+		</section>
+		
+
+        <footer>
+          SFMC-Conversion is maintained by <a href="https://github.com/PrecisionDialogue">PrecisionDialogue</a><br>
+          This page was generated by <a href="//pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+		
+      </div>
+    </div>
+  </body>
+</html>
